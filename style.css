@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh
+}
+
+.wrapper {
+  height: 900px;
+  width: 1400px;
+  background-color: red;
+}
+
+.app{
+  height: 100%;
+  width: 100%;
+}
+
+.app:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app-left, .app-right {
+  float: left;
+  height: 100%;
+}
+
+.app-left{
+  width: 30%;
+  background-color: lightblue;
+}
+
+.user {
+  display: flex;
+}
+
+.user-left{
+
+}
+
+.user-right{
+
+}
+
+.app-right{
+  width: 70%;
+  background-color: lightgreen;
+}
