@@ -18,12 +18,12 @@ body{
 .wrapper{
   height: 900px;
   width: 1400px;
-  background-color: red;
 }
 
 .app{
   height: 100%;
   width: 100%;
+  box-shadow: 1px 0px 26px -8px rgba(0,0,0,1);
 }
 
 .app:after{
@@ -39,7 +39,6 @@ body{
 
 .app-left{
   width: 30%;
-  background-color: lightblue;
 }
 
 .user{
@@ -51,18 +50,49 @@ body{
 .user-left{
   height: 100%;
   width: 50%;
-  background-color: tomato;
+  background-color: #EDEDED;
+}
+
+.user-img{
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .user-right{
   height: 100%;
   width: 50%;
-  background-color: purple;
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.user-right i{
+  color: #919191;
+  margin: 0 10px;
+  font-size: 20px;
 }
 
 .search-bar{
   height: 50px;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid lightgrey;
+  background-color: #EDEDED;
+}
+
+.search-bar i{
+  color: #919191;
+}
+
+.search-bar input{
+width: 370px;
+padding: 5px;
+border: 0;
+border-radius: 15px;
+margin-left: 5px;
 }
 
 .chat-list{
@@ -74,7 +104,7 @@ body{
 }
 
 .chat-list ul li{
-  border: 1px solid black;
+  border-bottom: 1px solid lightgrey;
   display: flex;
 }
 
