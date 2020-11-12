@@ -5,7 +5,7 @@ var app = new Vue ({
 
     contacts: [
       { name: 'Michele',
-        avatar: '_1',
+        avatar: 'https://icon-icons.com/icons2/1736/PNG/64/4043241-builder-helmet-worker_113249.png',
         visible: true,
         messages: [
         {
@@ -27,7 +27,7 @@ var app = new Vue ({
 
       {
         name: 'Fabio',
-        avatar: '_2',
+        avatar: 'https://icon-icons.com/icons2/1736/PNG/64/4043253-friday-halloween-jason-movie_113258.png',
         visible: true,
         messages: [
         {
@@ -49,7 +49,7 @@ var app = new Vue ({
 
       {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: 'https://icon-icons.com/icons2/1736/PNG/64/4043240-avatar-bad-breaking-chemisrty-heisenberg_113279.png',
         visible: true,
         messages: [
         {
@@ -71,7 +71,7 @@ var app = new Vue ({
 
       {
         name: 'Luisa',
-        avatar: '_4',
+        avatar: 'https://icon-icons.com/icons2/1736/PNG/64/4043270-avatar-joker-squad-suicide-woman_113256.png',
         visible: true,
         messages: [
         {

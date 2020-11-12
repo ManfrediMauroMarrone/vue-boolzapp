@@ -4,14 +4,18 @@
   box-sizing: border-box;
 }
 
-#root {
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+#root{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh
 }
 
-.wrapper {
+.wrapper{
   height: 900px;
   width: 1400px;
   background-color: red;
@@ -22,13 +26,13 @@
   width: 100%;
 }
 
-.app:after {
+.app:after{
   content: "";
   display: table;
   clear: both;
 }
 
-.app-left, .app-right {
+.app-left, .app-right{
   float: left;
   height: 100%;
 }
@@ -38,19 +42,93 @@
   background-color: lightblue;
 }
 
-.user {
+.user{
+  height: 70px;
+  background-color: blue;
   display: flex;
 }
 
 .user-left{
-
+  height: 100%;
+  width: 50%;
+  background-color: tomato;
 }
 
 .user-right{
+  height: 100%;
+  width: 50%;
+  background-color: purple;
+}
 
+.search-bar{
+  height: 50px;
+  background-color: green;
+}
+
+.chat-list{
+  padding: 10px;
+}
+
+.chat-list ul{
+  list-style-type: none;
+}
+
+.chat-list ul li{
+  border: 1px solid black;
+  display: flex;
+}
+
+.name-messages{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-messages p:first-of-type{
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .app-right{
   width: 70%;
   background-color: lightgreen;
+}
+
+.chat-user{
+  height: 70px;
+  width: 100%;
+  background-color: Chartreuse;
+}
+
+.chat-interface{
+  height: calc(100% - 140px);
+  width: 100%;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/12ee6265-e947-474a-a378-6d78ab0d1117/d8fr7iz-082cab4c-3f87-47e1-b2f0-efdb504372e5.jpg/v1/fill/w_1024,h_576,q_75,strp/super_hero_whatsapp_background_by_x_ama_d8fr7iz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC8xMmVlNjI2NS1lOTQ3LTQ3NGEtYTM3OC02ZDc4YWIwZDExMTdcL2Q4ZnI3aXotMDgyY2FiNGMtM2Y4Ny00N2UxLWIyZjAtZWZkYjUwNDM3MmU1LmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.vMsSrJL87xcHSN4_yT8cSlEGqymaknC5rvamCRrnlGU);
+}
+
+.received{
+  width: 100px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.sent{
+  width: 100px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 10px;
+  align-self: flex-end;
+  background-color: #DCF8C6;
+}
+
+.chat-blank{
+  height: 70px;
+  width: 100%;
+  background-color: DarkCyan;
 }
