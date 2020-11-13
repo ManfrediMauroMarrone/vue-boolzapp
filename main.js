@@ -3,6 +3,8 @@ var app = new Vue ({
 
   data: {
 
+    contactsIndex: 0,
+
     contacts: [
       { name: 'Michele',
         avatar: 'https://icon-icons.com/icons2/1736/PNG/64/4043241-builder-helmet-worker_113249.png',
@@ -86,6 +88,12 @@ var app = new Vue ({
         }],
       },
     ]
+  },
+
+  methods: {
+    changeChat(indiceContatto) {
+      this.contactsIndex = indiceContatto
+    }
   }
 
 

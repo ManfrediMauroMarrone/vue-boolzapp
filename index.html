@@ -32,10 +32,11 @@
               <i class="fas fa-search"></i>
               <input type="text" name="" value="" placeholder= "Cerca o inizia una nuova chat">
             </div>
-            <!-- lista delle chat -->
+                                          <!-- lista delle chat -->
             <div class="chat-list">
               <ul>
-                <li v-for="contact in contacts">
+                <!-- al click la funzione changeChat cambia il valore di contactsIndex e lo pone uguale all'indice dell'elemento corrente -->
+                <li @click="changeChat(index)" v-for="(contact, index) in contacts">
                   <div class="contact-img">
                     <img :src="contact.avatar" :alt="contact.name">
 
@@ -49,15 +50,18 @@
               </ul>
             </div>
           </div>
-          <!-- sezione messaggi -->
+
+                                    <!-- sezione messaggi -->
+                                    <!-- informazioni interlocutore -->
           <div class="app-right">
             <div class="chat-user">
               <div class="chat-user-img">
-                <img src="https://icon-icons.com/icons2/1736/PNG/64/4043241-builder-helmet-worker_113249.png" alt="">
+                <!-- l'avatar dipende dall'indice dell'elemento corrente -->
+                <img :src="contacts[contactsIndex].avatar" alt="">
               </div>
               <div class="chat-user-info-left">
-                <p>{{contacts[0].name}}</p>
-                <p>{{contacts[0].messages[2].date}}</p>
+                <p>{{contacts[contactsIndex].name}}</p>
+                <p>{{contacts[contactsIndex].messages.date}}</p>
 
               </div>
 
@@ -67,8 +71,10 @@
                 <i class="fas fa-ellipsis-v"></i>
               </div>
             </div>
+                                            <!-- sezione messaggi inviati e ricevuti -->
             <div class="chat-interface">
-              <div v-for="message in contacts[0].messages" :class="message.status">
+              <!-- qui il contatto preso in considerazione per stampare i messaggi è quello con indice pari al valore di contactsIndex -->
+              <div v-for="message in contacts[contactsIndex].messages" :class="message.status">
                 <p>{{message.message}}</p>
               </div>
             </div>
