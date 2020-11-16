@@ -103,7 +103,7 @@ var app = new Vue ({
       status: 'received'
     },
 
-    searchItem: '',
+    searchedUser: '',
 
   },
 
@@ -130,11 +130,15 @@ var app = new Vue ({
 
       },1000)
     },
+
+    search() {
+      console.log(this.searchedUser);
+    }
   },
 
   mounted: function() {
 
-    console.log(this.searchItem)
+    console.log(this.searchedUser)
   },
 
 })
