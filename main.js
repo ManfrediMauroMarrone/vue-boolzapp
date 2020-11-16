@@ -116,13 +116,18 @@ var app = new Vue ({
     },
 
     addReply(indiceContatto) {
-      setTimeout(function(){
-        alert('ciao')
-        this.contacts[indiceContatto].messages.push(this.newReceived);
 
-      }, 1000)
+      setTimeout(function () {
+        let newReceived =
+        {
+          date: '10/01/2020 15:50:00',
+          message: 'Come la vivi?',
+          status: 'received'
+        }
+        app.contacts[indiceContatto].messages.push(newReceived);
+
+      },1000)
     }
-
   },
 
 
