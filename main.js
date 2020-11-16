@@ -45,7 +45,7 @@ var app = new Vue ({
         {
           date: '20/03/2020 16:35:00',
           message: 'Mi piacerebbe ma devo andare a fare laspesa.',
-          status: 'received'
+          status: 'sent'
         }],
       },
 
@@ -87,14 +87,38 @@ var app = new Vue ({
           status: 'received'
         }],
       },
-    ]
+    ],
+
+    newMessage:
+    {
+      date: '10/01/2020 15:50:00',
+      message: '',
+      status: 'sent'
+    },
+
+    newReceived:
+    {
+      date: '10/01/2020 15:50:00',
+      message: 'Come la vivi?',
+      status: 'received'
+    }
+
   },
 
   methods: {
     changeChat(indiceContatto) {
       this.contactsIndex = indiceContatto
+    },
+
+    addMessage(indiceContatto) {
+      this.contacts[indiceContatto].messages.push(this.newMessage);
+
+    },
+
+    addReceived(indiceContatto) {
+      this.contacts[indiceContatto].messages.push(this.newReceived);
     }
-  }
+  },
 
 
 })

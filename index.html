@@ -61,7 +61,7 @@
               </div>
               <div class="chat-user-info-left">
                 <p>{{contacts[contactsIndex].name}}</p>
-                <p>{{contacts[contactsIndex].messages[contactsIndex].date}}</p>
+                <p>{{contacts[contactsIndex].messages[0].date}}</p>
 
               </div>
 
@@ -78,12 +78,13 @@
                 <p>{{message.message}}</p>
               </div>
             </div>
+                                      <!-- text area messaggio -->
             <div class="chat-blank">
               <div class="chat-blank-left">
                 <i class="far fa-smile"></i>
               </div>
               <div class="chat-blank-center">
-                <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="addMessage(contactsIndex), addReceived(contactsIndex)" v-model="newMessage.message" type="text" name="" value="" placeholder="Scrivi un messaggio">
 
               </div>
               <div class="chat-blank-right">
