@@ -50,7 +50,6 @@
               </ul>
             </div>
           </div>
-
                                     <!-- sezione messaggi -->
                                     <!-- informazioni interlocutore -->
           <div class="app-right">
@@ -84,7 +83,7 @@
                 <i class="far fa-smile"></i>
               </div>
               <div class="chat-blank-center">
-                <input @keyup.enter="addMessage(contactsIndex), addReceived(contactsIndex)" v-model="newMessage.message" type="text" name="" value="" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="addMessage(contactsIndex), addReply(contactsIndex)" v-model="newMessage.message" type="text" name="" value="" placeholder="Scrivi un messaggio">
 
               </div>
               <div class="chat-blank-right">

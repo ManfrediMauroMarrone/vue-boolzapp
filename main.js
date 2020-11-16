@@ -115,9 +115,14 @@ var app = new Vue ({
 
     },
 
-    addReceived(indiceContatto) {
-      this.contacts[indiceContatto].messages.push(this.newReceived);
+    addReply(indiceContatto) {
+      setTimeout(function(){
+        alert('ciao')
+        this.contacts[indiceContatto].messages.push(this.newReceived);
+
+      }, 1000)
     }
+
   },
 
 
