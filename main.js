@@ -101,7 +101,9 @@ var app = new Vue ({
       date: '10/01/2020 15:50:00',
       message: 'Come la vivi?',
       status: 'received'
-    }
+    },
+
+    searchItem: '',
 
   },
 
@@ -127,8 +129,12 @@ var app = new Vue ({
         app.contacts[indiceContatto].messages.push(newReceived);
 
       },1000)
-    }
+    },
   },
 
+  mounted: function() {
+
+    console.log(this.searchItem)
+  },
 
 })
