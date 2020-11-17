@@ -13,6 +13,7 @@
     <div id="root">
       <div class="wrapper">
         <div class="app">
+                                  <!-- sezione sinistra -->
           <div class="app-left">
             <div class="user">
               <div class="user-left">
@@ -20,6 +21,7 @@
                   <img src="https://icon-icons.com/icons2/1736/PNG/64/4043232-avatar-batman-comics-hero_113278.png" alt="">
 
                 </div>
+                <span>Manfro</span>
               </div>
 
               <div class="user-right">
@@ -28,6 +30,7 @@
                 <i class="fas fa-ellipsis-v"></i>
               </div>
             </div>
+                                  <!-- sezione ricerca -->
             <div class="search-bar">
               <i class="fas fa-search"></i>
               <input @keyup="search()" type="text" name="" v-model="searchedUser" placeholder= "Cerca o inizia una nuova chat">
@@ -36,6 +39,7 @@
             <div class="chat-list">
               <ul>
                 <!-- al click la funzione changeChat cambia il valore di contactsIndex e lo pone uguale all'indice dell'elemento corrente -->
+                <!-- il v-if verifica se una condizione è true o false, se true l'elemento a cui il v-if è collegato verrà mostrato in pagina altrimenti non sarà visibile -->
                 <li @click="changeChat(index)" v-for="(contact, index) in contacts" v-if="contact.visible">
                   <div class="contact-container">
                     <div class="contact-img">

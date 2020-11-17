@@ -45,14 +45,20 @@ body{
                     /* sezione user */
 .user{
   height: 70px;
-  background-color: blue;
   display: flex;
 }
 
 .user-left{
   height: 100%;
   width: 50%;
+  display: flex;
+  align-items: center;
   background-color: #EDEDED;
+}
+.user-left span{
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .user-img{
