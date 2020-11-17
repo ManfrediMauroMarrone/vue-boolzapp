@@ -36,7 +36,7 @@
             <div class="chat-list">
               <ul>
                 <!-- al click la funzione changeChat cambia il valore di contactsIndex e lo pone uguale all'indice dell'elemento corrente -->
-                <li @click="changeChat(index)" v-for="(contact, index) in contacts" v-bind:class="">
+                <li @click="changeChat(index)" v-for="(contact, index) in contacts" v-if="contact.visible">
                   <div class="contact-container">
                     <div class="contact-img">
                       <img :src="contact.avatar" :alt="contact.name">

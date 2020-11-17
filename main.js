@@ -138,8 +138,8 @@ var app = new Vue ({
       let searchedUser = this.searchedUser
 
       this.contacts.forEach((item) => {
-        if (!item.name.includes(searchedUser)) {
-          console.log('ok');
+        if (item.name.includes(searchedUser)) {
+          item.visible = 'false'
 
         }
       });
