@@ -30,20 +30,23 @@
             </div>
             <div class="search-bar">
               <i class="fas fa-search"></i>
-              <input @keyup="search" type="text" name="" :value="searchedUser" placeholder= "Cerca o inizia una nuova chat">
+              <input @keyup="search()" type="text" name="" v-model="searchedUser" placeholder= "Cerca o inizia una nuova chat">
             </div>
-                                          <!-- lista delle chat -->
+                                                      <!-- lista delle chat -->
             <div class="chat-list">
               <ul>
                 <!-- al click la funzione changeChat cambia il valore di contactsIndex e lo pone uguale all'indice dell'elemento corrente -->
-                <li @click="changeChat(index)" v-for="(contact, index) in contacts">
-                  <div class="contact-img">
-                    <img :src="contact.avatar" :alt="contact.name">
+                <li @click="changeChat(index)" v-for="(contact, index) in contacts" v-bind:class="">
+                  <div class="contact-container">
+                    <div class="contact-img">
+                      <img :src="contact.avatar" :alt="contact.name">
 
-                  </div>
-                  <div class="name-messages">
-                    <p>{{contact.name}}</p>
-                    <p>{{contact.messages[0].message}}</p>
+                    </div>
+                    <div class="name-messages">
+                      <p>{{contact.name}}</p>
+                      <p>{{contact.messages[0].message}}</p>
+
+                    </div>
 
                   </div>
                 </li>
@@ -83,7 +86,7 @@
                 <i class="far fa-smile"></i>
               </div>
               <div class="chat-blank-center">
-                <input @keyup.enter="addMessage(contactsIndex), addReply(contactsIndex)" v-model="newMessage.message" type="text" name="" value="" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="addMessage(contactsIndex), addReply(contactsIndex)" v-model="newMessage" type="text" name="" value="" placeholder="Scrivi un messaggio">
 
               </div>
               <div class="chat-blank-right">

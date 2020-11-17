@@ -89,12 +89,7 @@ var app = new Vue ({
       },
     ],
 
-    newMessage:
-    {
-      date: '10/01/2020 15:50:00',
-      message: '',
-      status: 'sent'
-    },
+    newMessage: '',
 
     newReceived:
     {
@@ -113,31 +108,46 @@ var app = new Vue ({
     },
 
     addMessage(indiceContatto) {
-      this.contacts[indiceContatto].messages.push(this.newMessage);
+      let newMessage = {
+        date: '10/01/2020 15:50:00',
+        message: this.newMessage,
+        status: 'sent'
+      }
+      this.contacts[indiceContatto].messages.push(newMessage);
 
+      this.newMessage = ''
     },
 
     addReply(indiceContatto) {
 
+      let contattoCorrente = this.contacts[indiceContatto];
       setTimeout(function () {
+
         let newReceived =
         {
           date: '10/01/2020 15:50:00',
-          message: 'Come la vivi?',
+          message: 'Ok',
           status: 'received'
         }
-        app.contacts[indiceContatto].messages.push(newReceived);
+        contattoCorrente.messages.push(newReceived);
 
       },1000)
     },
 
     search() {
-      console.log(this.searchedUser);
+      let searchedUser = this.searchedUser
+
+      this.contacts.forEach((item) => {
+        if (!item.name.includes(searchedUser)) {
+          console.log('ok');
+
+        }
+      });
+
     }
   },
 
   mounted: function() {
-
     console.log(this.searchedUser)
   },
 

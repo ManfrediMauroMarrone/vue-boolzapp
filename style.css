@@ -108,6 +108,8 @@ margin-left: 5px;
 
 .chat-list ul li{
   border-bottom: 1px solid lightgrey;
+}
+.contact-container{
   display: flex;
 }
 
@@ -247,4 +249,8 @@ margin-left: 5px;
 .chat-blank-left i, .chat-blank-right i{
   font-size: 20px;
   color: #919191;
+}
+
+.false{
+  display: none;
 }
