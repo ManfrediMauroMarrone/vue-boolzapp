@@ -40,7 +40,7 @@
               <ul>
                 <!-- al click la funzione changeChat cambia il valore di contactsIndex e lo pone uguale all'indice dell'elemento corrente -->
                 <!-- il v-if verifica se una condizione è true o false, se true l'elemento a cui il v-if è collegato verrà mostrato in pagina altrimenti non sarà visibile -->
-                <li @click="changeChat(index)" v-for="(contact, index) in contacts" v-if="contact.visible">
+                <li @click="changeChat(index)" v-for="(contact, index) in contacts" v-if="contact.visible" :class="index == contactsIndex ? 'active': null">
                   <div class="contact-container">
                     <div class="contact-img">
                       <img :src="contact.avatar" :alt="contact.name">
@@ -82,6 +82,9 @@
               <!-- qui il contatto preso in considerazione per stampare i messaggi è quello con indice pari al valore di contactsIndex -->
               <div v-for="message in contacts[contactsIndex].messages" :class="message.status">
                 <p>{{message.message}}</p>
+                <div class="time">
+                  <span>15:50</span>
+                </div>
               </div>
             </div>
                                       <!-- text area messaggio -->
