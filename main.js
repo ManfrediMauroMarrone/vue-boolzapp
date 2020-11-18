@@ -100,6 +100,8 @@ var app = new Vue ({
 
     searchedUser: '',
 
+    popUpWindow: false
+
   },
 
   methods: {
@@ -146,6 +148,15 @@ var app = new Vue ({
         }
       });
 
+    },
+
+    popUp() {
+
+      if (this.popUpWindow == false) {
+        this.popUpWindow = true
+      } else {
+        this.popUpWindow = false
+      }
     }
   },
 

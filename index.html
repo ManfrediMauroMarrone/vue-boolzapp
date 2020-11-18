@@ -80,7 +80,12 @@
                                             <!-- sezione messaggi inviati e ricevuti -->
             <div class="chat-interface">
               <!-- qui il contatto preso in considerazione per stampare i messaggi è quello con indice pari al valore di contactsIndex -->
-              <div v-for="message in contacts[contactsIndex].messages" :class="message.status">
+              <div id="bubble" @click="popUp()" v-for="message in contacts[contactsIndex].messages" :class="message.status">
+                <div class="popup" v-if="popUpWindow">
+                  <p>Message info</p>
+                  <p>Delete Message</p>
+
+                </div>
                 <p>{{message.message}}</p>
                 <div class="time">
                   <span>15:50</span>
